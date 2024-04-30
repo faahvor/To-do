@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="flex min-h-screen bg-pink-400 relative">
+        <div class="bg-white rounded-lg absolute min-h-5 mt-[4%] md:p-5 bottom-0 right-0 top-0 left-[70px]">
+            <nav class="">
+                <div class="flex items-center justify-center">
+                    <img src="image/logo.png" alt="" class="h-[70px]">
+                    <sub class="mt-[40px] text-pink-400 text-2xl font-bold">Todo List</sub>
+                </div>
+            </nav>
+            <div class="border border-pink-100 mb-10"></div>
+
+            <!-- body section -->
+            <div class="w-full">
+                <div class="grid md:grid-cols-[30%,1fr]">
+                    <div class="check md:grid md:grid-rows-3 hidden md:block gap-y-4 items-center justify-center"
+                        style="height: 100px;">
+                        <button value="Tasks" id="tasksName" class="cursor-pointer">
+                            <ion-icon name="sync-outline" class="text-2xl icons"></ion-icon>
+                            <span class="font-bold icons">Tasks</span>
+                        </button>
+                        <button value="completed" id="completed" class="cursor-pointer">
+                            <ion-icon name="bookmark-outline" class="text-2xl icons"></ion-icon>
+                            <span class="font-bold icons">Completed</span>
+                        </button>
+                        <button value="Uncompleted" id="notDone" class="cursor-pointer">
+                            <ion-icon name="alert-circle-outline" class="text-2xl icons"></ion-icon>
+                            <span class="font-bold icons">Uncompleted Task</span>
+                        </button>
+                    </div>
+
+                    <div class="md:absolute md:block hidden md:left-[31%] md:border-l md:border-pink-200 md:h-[100%]">
+                    </div>
+
+                    <div id="dropList" class="grid grid-row">
+                        <div id="taskDeal" class=" flex mb-8  items-center justify-center">
+                            <input type="text" id="input-box"
+                                class="bg-pink-400 sm:px-[-2px]  sm:py-[12px] md:py-2 md:px-10 text-pink-700 rounded-l-xl sm:placeholder:text-center placeholder:text-gray-600 outline-none"
+                                placeholder="Enter your task">
+                            <button id="button"
+                                class="button bg-pink-700 py-0 px-0 md:py-2 md:px-10 rounded-r-xl text-gray-600">Add
+                                Task</button>
+                        </div>
+
+                        <div id="task-container">
+                            <ul id="task-ul" >
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>  
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
